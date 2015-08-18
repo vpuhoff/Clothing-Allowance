@@ -21,9 +21,7 @@ namespace Client
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form3 childForm = new Form3();
-            childForm.MdiParent = this;
-            childForm.Show();
+           
         }
 
         private void OpenFile(object sender, EventArgs e)

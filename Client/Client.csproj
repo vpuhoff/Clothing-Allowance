@@ -86,12 +86,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="AdvDataGridView.Designer.cs">
-      <DependentUpon>AdvDataGridView.cs</DependentUpon>
-    </Compile>
     <Compile Include="CellView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,32 +93,8 @@
       <DependentUpon>CellView.cs</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
-    <Compile Include="DataRowEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataRowEditor.Designer.cs">
-      <DependentUpon>DataRowEditor.cs</DependentUpon>
-    </Compile>
     <Compile Include="dtproperty.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
@@ -228,20 +198,8 @@
     <Compile Include="ФормыОбеспечения.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdvDataGridView.resx">
-      <DependentUpon>AdvDataGridView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CellView.resx">
       <DependentUpon>CellView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataRowEditor.resx">
-      <DependentUpon>DataRowEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
@@ -338,12 +296,6 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Server\Server.csproj">
-      <Project>{ec37a4c4-e961-4da7-8ce6-12ccd42ff716}</Project>
-      <Name>Server</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

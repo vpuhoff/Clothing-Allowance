@@ -23,3 +23,24 @@ E:\Sources\SchoolDBLocal\SchoolDB\Client\obj\Debug\Client.БазыДанныхФ
 E:\Sources\SchoolDBLocal\SchoolDB\Client\obj\Debug\Client.СправочникиФормы.ЗванияФорма.resources
 E:\Sources\SchoolDBLocal\SchoolDB\Client\obj\Debug\Client.СправочникиФормы.НормативыФорма.resources
 E:\Sources\SchoolDBLocal\SchoolDB\Client\obj\Debug\Client.СправочникиФормы.ФормыОбеспеченияФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\PROG\Client.exe.config
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.exe
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.pdb
+I:\Clothing Allowance\Clothing-Allowance\PROG\Client.exe.manifest
+I:\Clothing Allowance\Clothing-Allowance\PROG\Client.application
+I:\Clothing Allowance\Clothing-Allowance\PROG\Client.exe
+I:\Clothing Allowance\Clothing-Allowance\PROG\Client.pdb
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.CellView.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\SimpleNetScanner.Help.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.MainForm.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.Properties.Resources.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.БазыДанныхФормы.ПодразделениеФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.БазыДанныхФормы.СотрудникиФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.БазыДанныхФормы.ФормаПредметы.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.СправочникиФормы.ЗванияФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.СправочникиФормы.НормативыФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.СправочникиФормы.ФормыОбеспеченияФорма.resources
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.exe.manifest
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.application

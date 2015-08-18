@@ -1,10 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{EC37A4C4-E961-4DA7-8CE6-12CCD42FF716}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{59507924-30F9-4080-AD1C-34C48B10BAFA}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC37A4C4-E961-4DA7-8CE6-12CCD42FF716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC37A4C4-E961-4DA7-8CE6-12CCD42FF716}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC37A4C4-E961-4DA7-8CE6-12CCD42FF716}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC37A4C4-E961-4DA7-8CE6-12CCD42FF716}.Release|Any CPU.Build.0 = Release|Any CPU
 		{59507924-30F9-4080-AD1C-34C48B10BAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59507924-30F9-4080-AD1C-34C48B10BAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59507924-30F9-4080-AD1C-34C48B10BAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
