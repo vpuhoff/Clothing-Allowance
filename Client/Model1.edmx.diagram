@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="542d6d3e1d274301bcfaa1b70f54dbb3" Name="Diagram1" ZoomLevel="54">
+        <EntityTypeShape EntityType="DatabaseSQLModel.dtproperty" Width="1.5" PointX="2.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.User" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Документы_о_выдаче" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Звания" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Имущество" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Нормативы" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Подразделения" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Предметы" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Приказы" Width="1.5" PointX="11.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Сотрудники" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Справочники" Width="1.5" PointX="8.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.Справочные_значения" Width="1.5" PointX="11" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseSQLModel.ФормыОбеспечения" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseSQLModel.Users_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Имущество_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Нормативы_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Сотрудники_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Имущество_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Имущество_FK02" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Нормативы_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Нормативы_FK02" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Подразделения_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Приказы_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Сотрудники_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Приказы_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseSQLModel.Справочные_значения_FK00" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

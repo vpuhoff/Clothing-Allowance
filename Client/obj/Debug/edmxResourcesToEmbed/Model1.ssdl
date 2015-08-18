@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseSQLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Сотрудник" Type="int" />
+    <Property Name="Логин" Type="nvarchar" MaxLength="255" />
+    <Property Name="Пароль" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Документы о выдаче">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="Номер" Type="int" />
+    <Property Name="Дата выдачи" Type="datetime" />
+    <Property Name="Выдал" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Звания">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Звание" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Имущество">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Норматив_ID" Type="int" />
+    <Property Name="Предмет_ID" Type="int" />
+    <Property Name="Срок службы" Type="int" />
+    <Property Name="Дата окончания срока службы" Type="datetime" />
+    <Property Name="Количество выданных" Type="int" />
+    <Property Name="Количество по нормативу" Type="int" />
+    <Property Name="Количество компенсированных" Type="int" />
+    <Property Name="Цена за единицу" Type="int" />
+    <Property Name="Документ о выдаче" Type="int" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Нормативы">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Форма обеспечения" Type="int" />
+    <Property Name="Звание" Type="int" />
+    <Property Name="Предмет" Type="int" />
+    <Property Name="Количество" Type="int" />
+    <Property Name="Срок службы" Type="nvarchar" MaxLength="255" />
+    <Property Name="Размер компенсации" Type="money" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Подразделения">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="Головное подразделение" Type="int" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Предметы">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="Фурнитура" Type="bit" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Приказы">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Дата" Type="datetime" />
+    <Property Name="Номер" Type="int" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="Сотрудник" Type="int" />
+    <Property Name="Подразделение" Type="int" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Сотрудники">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Фамилия" Type="nvarchar" MaxLength="255" />
+    <Property Name="Имя" Type="nvarchar" MaxLength="255" />
+    <Property Name="Отчество" Type="nvarchar" MaxLength="255" />
+    <Property Name="Рост" Type="int" />
+    <Property Name="Объем груди" Type="int" />
+    <Property Name="Звание" Type="int" />
+    <Property Name="Подразделение" Type="int" />
+    <Property Name="Пол" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Справочники">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Справочные значения">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Справочник" Type="int" />
+    <Property Name="Значение" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ФормыОбеспечения">
+    <Key>
+      <PropertyRef Name="Код" />
+    </Key>
+    <Property Name="Код" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+    <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="Users_FK00">
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудники">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Сотрудник" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Имущество_FK00">
+    <End Role="Документы о выдаче" Type="Self.Документы о выдаче" Multiplicity="0..1" />
+    <End Role="Имущество" Type="Self.Имущество" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Документы о выдаче">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Имущество">
+        <PropertyRef Name="Документ о выдаче" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Имущество_FK01">
+    <End Role="Нормативы" Type="Self.Нормативы" Multiplicity="0..1" />
+    <End Role="Имущество" Type="Self.Имущество" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Нормативы">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Имущество">
+        <PropertyRef Name="Норматив_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Имущество_FK02">
+    <End Role="Предметы" Type="Self.Предметы" Multiplicity="0..1" />
+    <End Role="Имущество" Type="Self.Имущество" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Предметы">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Имущество">
+        <PropertyRef Name="Предмет_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Нормативы_FK00">
+    <End Role="Звания" Type="Self.Звания" Multiplicity="0..1" />
+    <End Role="Нормативы" Type="Self.Нормативы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Звания">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Нормативы">
+        <PropertyRef Name="Звание" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Нормативы_FK01">
+    <End Role="Предметы" Type="Self.Предметы" Multiplicity="0..1" />
+    <End Role="Нормативы" Type="Self.Нормативы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Предметы">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Нормативы">
+        <PropertyRef Name="Предмет" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Нормативы_FK02">
+    <End Role="ФормыОбеспечения" Type="Self.ФормыОбеспечения" Multiplicity="0..1" />
+    <End Role="Нормативы" Type="Self.Нормативы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ФормыОбеспечения">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Нормативы">
+        <PropertyRef Name="Форма обеспечения" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Подразделения_FK00">
+    <End Role="Подразделения" Type="Self.Подразделения" Multiplicity="0..1" />
+    <End Role="Подразделения1" Type="Self.Подразделения" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Подразделения">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Подразделения1">
+        <PropertyRef Name="Головное подразделение" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Приказы_FK00">
+    <End Role="Подразделения" Type="Self.Подразделения" Multiplicity="0..1" />
+    <End Role="Приказы" Type="Self.Приказы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Подразделения">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Приказы">
+        <PropertyRef Name="Подразделение" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Приказы_FK01">
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="0..1" />
+    <End Role="Приказы" Type="Self.Приказы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудники">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Приказы">
+        <PropertyRef Name="Сотрудник" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Сотрудники_FK00">
+    <End Role="Звания" Type="Self.Звания" Multiplicity="0..1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Звания">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Звание" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Сотрудники_FK01">
+    <End Role="Подразделения" Type="Self.Подразделения" Multiplicity="0..1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Подразделения">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Подразделение" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Справочные значения_FK00">
+    <End Role="Справочники" Type="Self.Справочники" Multiplicity="0..1" />
+    <End Role="Справочные значения" Type="Self.Справочные значения" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Справочники">
+        <PropertyRef Name="Код" />
+      </Principal>
+      <Dependent Role="Справочные значения">
+        <PropertyRef Name="Справочник" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseSQLModelStoreContainer">
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Документы о выдаче" EntityType="Self.Документы о выдаче" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Звания" EntityType="Self.Звания" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Имущество" EntityType="Self.Имущество" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Нормативы" EntityType="Self.Нормативы" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Подразделения" EntityType="Self.Подразделения" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Предметы" EntityType="Self.Предметы" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Приказы" EntityType="Self.Приказы" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Справочники" EntityType="Self.Справочники" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Справочные значения" EntityType="Self.Справочные значения" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ФормыОбеспечения" EntityType="Self.ФормыОбеспечения" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Users_FK00" Association="Self.Users_FK00">
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="Имущество_FK00" Association="Self.Имущество_FK00">
+      <End Role="Документы о выдаче" EntitySet="Документы о выдаче" />
+      <End Role="Имущество" EntitySet="Имущество" />
+    </AssociationSet>
+    <AssociationSet Name="Имущество_FK01" Association="Self.Имущество_FK01">
+      <End Role="Нормативы" EntitySet="Нормативы" />
+      <End Role="Имущество" EntitySet="Имущество" />
+    </AssociationSet>
+    <AssociationSet Name="Имущество_FK02" Association="Self.Имущество_FK02">
+      <End Role="Предметы" EntitySet="Предметы" />
+      <End Role="Имущество" EntitySet="Имущество" />
+    </AssociationSet>
+    <AssociationSet Name="Нормативы_FK00" Association="Self.Нормативы_FK00">
+      <End Role="Звания" EntitySet="Звания" />
+      <End Role="Нормативы" EntitySet="Нормативы" />
+    </AssociationSet>
+    <AssociationSet Name="Нормативы_FK01" Association="Self.Нормативы_FK01">
+      <End Role="Предметы" EntitySet="Предметы" />
+      <End Role="Нормативы" EntitySet="Нормативы" />
+    </AssociationSet>
+    <AssociationSet Name="Нормативы_FK02" Association="Self.Нормативы_FK02">
+      <End Role="ФормыОбеспечения" EntitySet="ФормыОбеспечения" />
+      <End Role="Нормативы" EntitySet="Нормативы" />
+    </AssociationSet>
+    <AssociationSet Name="Подразделения_FK00" Association="Self.Подразделения_FK00">
+      <End Role="Подразделения" EntitySet="Подразделения" />
+      <End Role="Подразделения1" EntitySet="Подразделения" />
+    </AssociationSet>
+    <AssociationSet Name="Приказы_FK00" Association="Self.Приказы_FK00">
+      <End Role="Подразделения" EntitySet="Подразделения" />
+      <End Role="Приказы" EntitySet="Приказы" />
+    </AssociationSet>
+    <AssociationSet Name="Приказы_FK01" Association="Self.Приказы_FK01">
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+      <End Role="Приказы" EntitySet="Приказы" />
+    </AssociationSet>
+    <AssociationSet Name="Сотрудники_FK00" Association="Self.Сотрудники_FK00">
+      <End Role="Звания" EntitySet="Звания" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+    <AssociationSet Name="Сотрудники_FK01" Association="Self.Сотрудники_FK01">
+      <End Role="Подразделения" EntitySet="Подразделения" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+    <AssociationSet Name="Справочные значения_FK00" Association="Self.Справочные значения_FK00">
+      <End Role="Справочники" EntitySet="Справочники" />
+      <End Role="Справочные значения" EntitySet="Справочные значения" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,9 @@
+syntax: glob
+Client/bin/*
+Client/obj/*
+PROG/*
+Server/Server.v12.suo
+Server/bin/*
+Server/obj/*
+БД Школа.suo
+БД Школа.v12.suo

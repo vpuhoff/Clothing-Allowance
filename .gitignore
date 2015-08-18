@@ -41,3 +41,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.hg/00changelog.i
+*.exe
+.hg/store/undo

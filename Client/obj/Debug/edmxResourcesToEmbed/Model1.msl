@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseSQLModelStoreContainer" CdmEntityContainer="DatabaseSQLEntities">
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.dtproperty">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Сотрудник" ColumnName="Сотрудник" />
+          <ScalarProperty Name="Логин" ColumnName="Логин" />
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Документы_о_выдаче">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Документы_о_выдаче">
+        <MappingFragment StoreEntitySet="Документы о выдаче">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Номер" ColumnName="Номер" />
+          <ScalarProperty Name="Дата_выдачи" ColumnName="Дата выдачи" />
+          <ScalarProperty Name="Выдал" ColumnName="Выдал" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Звания">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Звания">
+        <MappingFragment StoreEntitySet="Звания">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Звание" ColumnName="Звание" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Имущество">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Имущество">
+        <MappingFragment StoreEntitySet="Имущество">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Норматив_ID" ColumnName="Норматив_ID" />
+          <ScalarProperty Name="Предмет_ID" ColumnName="Предмет_ID" />
+          <ScalarProperty Name="Срок_службы" ColumnName="Срок службы" />
+          <ScalarProperty Name="Дата_окончания_срока_службы" ColumnName="Дата окончания срока службы" />
+          <ScalarProperty Name="Количество_выданных" ColumnName="Количество выданных" />
+          <ScalarProperty Name="Количество_по_нормативу" ColumnName="Количество по нормативу" />
+          <ScalarProperty Name="Количество_компенсированных" ColumnName="Количество компенсированных" />
+          <ScalarProperty Name="Цена_за_единицу" ColumnName="Цена за единицу" />
+          <ScalarProperty Name="Документ_о_выдаче" ColumnName="Документ о выдаче" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Нормативы">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Нормативы">
+        <MappingFragment StoreEntitySet="Нормативы">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Форма_обеспечения" ColumnName="Форма обеспечения" />
+          <ScalarProperty Name="Звание" ColumnName="Звание" />
+          <ScalarProperty Name="Предмет" ColumnName="Предмет" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+          <ScalarProperty Name="Срок_службы" ColumnName="Срок службы" />
+          <ScalarProperty Name="Размер_компенсации" ColumnName="Размер компенсации" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Подразделения">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Подразделения">
+        <MappingFragment StoreEntitySet="Подразделения">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Головное_подразделение" ColumnName="Головное подразделение" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Предметы">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Предметы">
+        <MappingFragment StoreEntitySet="Предметы">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Фурнитура" ColumnName="Фурнитура" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Приказы">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Приказы">
+        <MappingFragment StoreEntitySet="Приказы">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+          <ScalarProperty Name="Номер" ColumnName="Номер" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Сотрудник" ColumnName="Сотрудник" />
+          <ScalarProperty Name="Подразделение" ColumnName="Подразделение" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сотрудники">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Сотрудники">
+        <MappingFragment StoreEntitySet="Сотрудники">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Рост" ColumnName="Рост" />
+          <ScalarProperty Name="Объем_груди" ColumnName="Объем груди" />
+          <ScalarProperty Name="Звание" ColumnName="Звание" />
+          <ScalarProperty Name="Подразделение" ColumnName="Подразделение" />
+          <ScalarProperty Name="Пол" ColumnName="Пол" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Справочники">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Справочники">
+        <MappingFragment StoreEntitySet="Справочники">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Справочные_значения">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.Справочные_значения">
+        <MappingFragment StoreEntitySet="Справочные значения">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Справочник" ColumnName="Справочник" />
+          <ScalarProperty Name="Значение" ColumnName="Значение" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ФормыОбеспечения">
+      <EntityTypeMapping TypeName="DatabaseSQLModel.ФормыОбеспечения">
+        <MappingFragment StoreEntitySet="ФормыОбеспечения">
+          <ScalarProperty Name="Код" ColumnName="Код" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
