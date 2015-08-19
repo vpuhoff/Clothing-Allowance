@@ -179,5 +179,21 @@ namespace Client
             childForm.WindowState = FormWindowState.Maximized;
             childForm.Show();
         }
+
+        private void indexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SimpleNetScanner.Help childForm = new SimpleNetScanner.Help();
+            childForm.MdiParent = this;
+            childForm.WindowState = FormWindowState.Maximized;
+            childForm.Show();
+        }
+
+        private void справочникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ВсеСправочникиФорма childForm = new ВсеСправочникиФорма();
+            childForm.MdiParent = this;
+            childForm.WindowState = FormWindowState.Maximized;
+            childForm.Show();
+        }
     }
 }

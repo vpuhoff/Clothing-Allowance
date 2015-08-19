@@ -13,12 +13,12 @@ namespace Client.БазыДанныхФормы
 {
     public partial class ПодразделениеФорма : Form
     {
-        DatabaseSQLEntities _context;
+        
         public ПодразделениеФорма()
         {
             InitializeComponent();
         }
-
+        DatabaseSQLEntities _context;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -67,6 +67,11 @@ namespace Client.БазыДанныхФормы
         }
 
         private void ПодразделениеФорма_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void подразделенияDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

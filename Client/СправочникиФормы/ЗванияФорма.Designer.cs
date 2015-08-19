@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ЗванияФорма));
-            this.званияBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.званияBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.званияBindingSource = new System.Windows.Forms.BindingSource();
+            this.званияBindingNavigator = new System.Windows.Forms.BindingNavigator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -44,14 +43,16 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.званияBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.званияDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colКод = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colЗвание = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colupsize_ts = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.званияBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.званияBindingNavigator)).BeginInit();
             this.званияBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.званияDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // званияBindingSource
@@ -85,7 +86,7 @@
             this.званияBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.званияBindingNavigator.Name = "званияBindingNavigator";
             this.званияBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.званияBindingNavigator.Size = new System.Drawing.Size(546, 27);
+            this.званияBindingNavigator.Size = new System.Drawing.Size(557, 27);
             this.званияBindingNavigator.TabIndex = 0;
             this.званияBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -101,8 +102,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
+            this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -142,7 +143,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -183,50 +184,61 @@
             this.званияBindingNavigatorSaveItem.Text = "Save Data";
             this.званияBindingNavigatorSaveItem.Click += new System.EventHandler(this.званияBindingNavigatorSaveItem_Click);
             // 
-            // званияDataGridView
+            // gridControl1
             // 
-            this.званияDataGridView.AutoGenerateColumns = false;
-            this.званияDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.званияDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewImageColumn1});
-            this.званияDataGridView.DataSource = this.званияBindingSource;
-            this.званияDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.званияDataGridView.Location = new System.Drawing.Point(0, 27);
-            this.званияDataGridView.Name = "званияDataGridView";
-            this.званияDataGridView.RowTemplate.Height = 24;
-            this.званияDataGridView.Size = new System.Drawing.Size(546, 405);
-            this.званияDataGridView.TabIndex = 1;
+            this.gridControl1.DataSource = this.званияBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 27);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(557, 352);
+            this.gridControl1.TabIndex = 2;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // dataGridViewTextBoxColumn1
+            // gridView1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colКод,
+            this.colЗвание,
+            this.colupsize_ts});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.Inplace;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsView.GroupDrawMode = DevExpress.XtraGrid.Views.Grid.GroupDrawMode.Standard;
+            this.gridView1.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView1.OptionsView.ShowDetailButtons = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colЗвание, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
-            // dataGridViewTextBoxColumn2
+            // colКод
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Звание";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Звание";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.colКод.FieldName = "Код";
+            this.colКод.Name = "colКод";
             // 
-            // dataGridViewImageColumn1
+            // colЗвание
             // 
-            this.dataGridViewImageColumn1.DataPropertyName = "upsize_ts";
-            this.dataGridViewImageColumn1.HeaderText = "upsize_ts";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Visible = false;
+            this.colЗвание.FieldName = "Звание";
+            this.colЗвание.Name = "colЗвание";
+            this.colЗвание.Visible = true;
+            this.colЗвание.VisibleIndex = 0;
+            // 
+            // colupsize_ts
+            // 
+            this.colupsize_ts.FieldName = "upsize_ts";
+            this.colupsize_ts.Name = "colupsize_ts";
             // 
             // ЗванияФорма
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 432);
-            this.Controls.Add(this.званияDataGridView);
+            this.ClientSize = new System.Drawing.Size(557, 379);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.званияBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ЗванияФорма";
             this.Text = "Звания";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ЗнанияФорма_FormClosing);
@@ -234,7 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.званияBindingNavigator)).EndInit();
             this.званияBindingNavigator.ResumeLayout(false);
             this.званияBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.званияDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,10 +269,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton званияBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView званияDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colКод;
+        private DevExpress.XtraGrid.Columns.GridColumn colЗвание;
+        private DevExpress.XtraGrid.Columns.GridColumn colupsize_ts;
 
     }
 }

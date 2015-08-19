@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ПодразделениеФорма));
             this.подразделенияBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.подразделенияDataGridView = new System.Windows.Forms.DataGridView();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.подразделенияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.подразделенияBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.подразделенияDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.подразделенияBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.подразделенияBindingNavigator)).BeginInit();
             this.подразделенияBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.подразделенияDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.подразделенияBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.подразделенияDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // подразделенияBindingNavigator
@@ -79,54 +79,9 @@
             this.подразделенияBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.подразделенияBindingNavigator.Name = "подразделенияBindingNavigator";
             this.подразделенияBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.подразделенияBindingNavigator.Size = new System.Drawing.Size(714, 27);
+            this.подразделенияBindingNavigator.Size = new System.Drawing.Size(536, 27);
             this.подразделенияBindingNavigator.TabIndex = 0;
             this.подразделенияBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // подразделенияDataGridView
-            // 
-            this.подразделенияDataGridView.AutoGenerateColumns = false;
-            this.подразделенияDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.подразделенияDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
-            this.подразделенияDataGridView.DataSource = this.подразделенияBindingSource;
-            this.подразделенияDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.подразделенияDataGridView.Location = new System.Drawing.Point(0, 27);
-            this.подразделенияDataGridView.Name = "подразделенияDataGridView";
-            this.подразделенияDataGridView.RowTemplate.Height = 24;
-            this.подразделенияDataGridView.Size = new System.Drawing.Size(714, 405);
-            this.подразделенияDataGridView.TabIndex = 1;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -136,6 +91,17 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // подразделенияBindingSource
+            // 
+            this.подразделенияBindingSource.DataSource = typeof(Client.Подразделения);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -164,6 +130,25 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -182,6 +167,11 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
             // подразделенияBindingNavigatorSaveItem
             // 
             this.подразделенияBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -191,6 +181,22 @@
             this.подразделенияBindingNavigatorSaveItem.Text = "Save Data";
             this.подразделенияBindingNavigatorSaveItem.Click += new System.EventHandler(this.подразделенияBindingNavigatorSaveItem_Click);
             // 
+            // подразделенияDataGridView
+            // 
+            this.подразделенияDataGridView.AutoGenerateColumns = false;
+            this.подразделенияDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.подразделенияDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            this.подразделенияDataGridView.DataSource = this.подразделенияBindingSource;
+            this.подразделенияDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.подразделенияDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.подразделенияDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.подразделенияDataGridView.Name = "подразделенияDataGridView";
+            this.подразделенияDataGridView.RowTemplate.Height = 24;
+            this.подразделенияDataGridView.Size = new System.Drawing.Size(536, 324);
+            this.подразделенияDataGridView.TabIndex = 1;
+            this.подразделенияDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.подразделенияDataGridView_CellContentClick);
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -198,25 +204,22 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Наименование";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // подразделенияBindingSource
-            // 
-            this.подразделенияBindingSource.DataSource = typeof(Client.Подразделения);
-            // 
             // ПодразделениеФорма
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 432);
+            this.ClientSize = new System.Drawing.Size(536, 351);
             this.Controls.Add(this.подразделенияDataGridView);
             this.Controls.Add(this.подразделенияBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ПодразделениеФорма";
             this.Text = "Подразделения";
             this.Load += new System.EventHandler(this.ПодразделениеФорма_Load);
             ((System.ComponentModel.ISupportInitialize)(this.подразделенияBindingNavigator)).EndInit();
             this.подразделенияBindingNavigator.ResumeLayout(false);
             this.подразделенияBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.подразделенияDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.подразделенияBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.подразделенияDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

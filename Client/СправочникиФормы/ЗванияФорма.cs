@@ -64,7 +64,7 @@ namespace Client.СправочникиФормы
         private void званияBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             Save();
-            званияDataGridView.Refresh();
+            gridControl1.Refresh();
         }
 
         private void ЗнанияФорма_FormClosing(object sender, FormClosingEventArgs e)
