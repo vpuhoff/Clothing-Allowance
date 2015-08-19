@@ -46,3 +46,4 @@ I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.application
 I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.exe
 I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.pdb
 I:\Clothing Allowance\Clothing-Allowance\PROG\Client.pdb
+I:\Clothing Allowance\Clothing-Allowance\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache

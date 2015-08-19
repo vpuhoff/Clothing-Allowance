@@ -79,6 +79,11 @@ namespace Client.СправочникиФормы
 	        }
             if (e.Page.Caption == "Сотрудники")
             {
+                _context.Подразделения.Load();
+                _context.Звания.Load();
+                _context.Сотрудники.Load();
+                подразделенияBindingSource.DataSource = _context.Подразделения.Local.ToBindingList();
+                званияBindingSource.DataSource = _context.Звания.Local.ToBindingList();
                 bindingSource2.DataSource = _context.Сотрудники.Local.ToBindingList();
             }
 
@@ -88,6 +93,11 @@ namespace Client.СправочникиФормы
         private void navigationPane1_StateChanged(object sender, DevExpress.XtraBars.Navigation.StateChangedEventArgs e)
         {
             
+        }
+
+        private void navigationPane1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

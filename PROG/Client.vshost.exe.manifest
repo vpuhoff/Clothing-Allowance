@@ -118,14 +118,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Client.exe" size="282112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Client.exe" size="282624">
       <assemblyIdentity name="Client" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WHPfp3gJd0AO+yUM/3iaB0ZVjViBlYP0y+3njyIb/MQ=</dsig:DigestValue>
+        <dsig:DigestValue>VF3LNp9RDk/ckr7VjiWDzGTWN8KafeC2Uho6BC48Uxo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -25,7 +25,6 @@ namespace Client.БазыДанныхФормы
             _context = new DatabaseSQLEntities();
             _context.Configuration.LazyLoadingEnabled = true;
             _context.Configuration.ValidateOnSaveEnabled = true;
-            _context.Database.BeginTransaction(IsolationLevel.Serializable);
             // Call the Load method to get the data for the given DbSet  
             // from the database.  
             // The data is materialized as entities. The entities are managed by  

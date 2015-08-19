@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.сотрудникиDataGridView = new System.Windows.Forms.DataGridView();
-            this.Звание = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Подразделение = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.званияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.подразделенияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сотрудникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.званияBindingSource = new System.Windows.Forms.BindingSource();
-            this.подразделенияBindingSource = new System.Windows.Forms.BindingSource();
-            this.сотрудникиBindingSource = new System.Windows.Forms.BindingSource();
+            this.Звание = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Подразделение = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.сотрудникиDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.званияBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.подразделенияBindingSource)).BeginInit();
@@ -62,7 +63,7 @@
             this.сотрудникиDataGridView.DataSource = this.сотрудникиBindingSource;
             this.сотрудникиDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.сотрудникиDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.сотрудникиDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.сотрудникиDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.сотрудникиDataGridView.Name = "сотрудникиDataGridView";
             this.сотрудникиDataGridView.RowTemplate.Height = 24;
             this.сотрудникиDataGridView.Size = new System.Drawing.Size(790, 351);
@@ -70,35 +71,27 @@
             this.сотрудникиDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.сотрудникиDataGridView_CellContentClick);
             this.сотрудникиDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.сотрудникиDataGridView_CellEndEdit);
             // 
-            // Звание
+            // званияBindingSource
             // 
-            this.Звание.DataPropertyName = "Звание";
-            this.Звание.DataSource = this.званияBindingSource;
-            this.Звание.DisplayMember = "Звание";
-            this.Звание.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.Звание.HeaderText = "Звание";
-            this.Звание.Name = "Звание";
-            this.Звание.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Звание.ValueMember = "Код";
-            this.Звание.Width = 120;
+            this.званияBindingSource.DataSource = typeof(Client.Звания);
+            this.званияBindingSource.CurrentChanged += new System.EventHandler(this.званияBindingSource_CurrentChanged);
             // 
-            // Подразделение
+            // подразделенияBindingSource
             // 
-            this.Подразделение.DataPropertyName = "Подразделение";
-            this.Подразделение.DataSource = this.подразделенияBindingSource;
-            this.Подразделение.DisplayMember = "Наименование";
-            this.Подразделение.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.Подразделение.HeaderText = "Подразделение";
-            this.Подразделение.Name = "Подразделение";
-            this.Подразделение.ValueMember = "Код";
-            this.Подразделение.Width = 130;
+            this.подразделенияBindingSource.DataSource = typeof(Client.Подразделения);
+            this.подразделенияBindingSource.CurrentChanged += new System.EventHandler(this.подразделенияBindingSource_CurrentChanged);
+            // 
+            // сотрудникиBindingSource
+            // 
+            this.сотрудникиBindingSource.DataSource = typeof(Client.Сотрудники);
+            this.сотрудникиBindingSource.CurrentChanged += new System.EventHandler(this.сотрудникиBindingSource_CurrentChanged);
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Фамилия";
             this.dataGridViewTextBoxColumn2.HeaderText = "Фамилия";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 164;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -142,20 +135,28 @@
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.Width = 50;
             // 
-            // званияBindingSource
+            // Звание
             // 
-            this.званияBindingSource.DataSource = typeof(Client.Звания);
-            this.званияBindingSource.CurrentChanged += new System.EventHandler(this.званияBindingSource_CurrentChanged);
+            this.Звание.DataPropertyName = "Звание";
+            this.Звание.DataSource = this.званияBindingSource;
+            this.Звание.DisplayMember = "Звание";
+            this.Звание.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Звание.HeaderText = "Звание";
+            this.Звание.Name = "Звание";
+            this.Звание.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Звание.ValueMember = "Код";
+            this.Звание.Width = 120;
             // 
-            // подразделенияBindingSource
+            // Подразделение
             // 
-            this.подразделенияBindingSource.DataSource = typeof(Client.Подразделения);
-            this.подразделенияBindingSource.CurrentChanged += new System.EventHandler(this.подразделенияBindingSource_CurrentChanged);
-            // 
-            // сотрудникиBindingSource
-            // 
-            this.сотрудникиBindingSource.DataSource = typeof(Client.Сотрудники);
-            this.сотрудникиBindingSource.CurrentChanged += new System.EventHandler(this.сотрудникиBindingSource_CurrentChanged);
+            this.Подразделение.DataPropertyName = "Подразделение";
+            this.Подразделение.DataSource = this.подразделенияBindingSource;
+            this.Подразделение.DisplayMember = "Наименование";
+            this.Подразделение.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Подразделение.HeaderText = "Подразделение";
+            this.Подразделение.Name = "Подразделение";
+            this.Подразделение.ValueMember = "Код";
+            this.Подразделение.Width = 130;
             // 
             // СотрудникиФорма
             // 
@@ -163,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 351);
             this.Controls.Add(this.сотрудникиDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "СотрудникиФорма";
             this.Text = "Сотрудники";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ЗнанияФорма_FormClosing);

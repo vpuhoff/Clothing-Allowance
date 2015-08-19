@@ -29,7 +29,7 @@
       <PropertyRef Name="Код" />
     </Key>
     <Property Name="Код" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Наименование" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Наименование" Type="String" MaxLength="255" FixedLength="false" Unicode="true" ConcurrencyMode="Fixed" />
     <Property Name="Номер" Type="Int32" />
     <Property Name="Дата_выдачи" Type="DateTime" Precision="3" />
     <Property Name="Выдал" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -125,15 +125,15 @@
       <PropertyRef Name="Код" />
     </Key>
     <Property Name="Код" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Фамилия" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Фамилия" Type="String" MaxLength="255" FixedLength="false" Unicode="true" ConcurrencyMode="Fixed" />
     <Property Name="Имя" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Отчество" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Рост" Type="Int32" />
     <Property Name="Объем_груди" Type="Int32" />
     <Property Name="Звание" Type="Int32" />
-    <Property Name="Подразделение" Type="Int32" />
+    <Property Name="Подразделение" Type="Int32" ConcurrencyMode="Fixed" />
     <Property Name="Пол" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Users" Relationship="Self.Users_FK00" FromRole="Сотрудники" ToRole="Users" />
     <NavigationProperty Name="Звания" Relationship="Self.Сотрудники_FK00" FromRole="Сотрудники" ToRole="Звания" />
     <NavigationProperty Name="Подразделения" Relationship="Self.Сотрудники_FK01" FromRole="Сотрудники" ToRole="Подразделения" />
